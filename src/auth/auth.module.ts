@@ -30,7 +30,7 @@ export const ROUTES: Routes = [
 ];
 
 export const firebaseConfig: FirebaseAppConfig = {
-  apiKey: "AIzaSyCmiOTCfXBgAEg2vKcNvJFTpFbteUCe6cA",
+  apiKey: "SECRET_KEY",
   authDomain: "fitness-app-2c089.firebaseapp.com",
   databaseURL: "https://fitness-app-2c089.firebaseio.com",
   projectId: "fitness-app-2c089",

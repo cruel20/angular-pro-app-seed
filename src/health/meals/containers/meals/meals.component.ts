@@ -11,7 +11,7 @@ import { Store } from "../../../../store";
   styleUrls: ["meals.component.scss"],
   template: `
     <div>
-      Meals
+      Mealssss
       {{ meals$ | async | json }}
     </div>
   `,
@@ -23,9 +23,7 @@ export class MealsComponent implements OnInit, OnDestroy {
   constructor(private store: Store, private mealsService: MealsService) {}
 
   ngOnInit() {
-    console.log("dupa");
     this.meals$ = this.store.select<Meal[]>("meals");
-    console.log(this.meals$);
     this.subscription = this.mealsService.meals$.subscribe();
   }
 
