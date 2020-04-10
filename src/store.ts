@@ -11,7 +11,7 @@ export interface State {
 
 const state: State = {
   user: undefined,
-  meals: undefined
+  meals: undefined,
 };
 
 export class Store {
