@@ -74,4 +74,8 @@ export class MealsService {
   removeMeal(key: string) {
     return this.db.list(`meals/${this.uid}`).remove(key);
   }
+
+  updateMeal(key: string, meal: Meal) {
+    return this.db.object(`meals/${this.uid}/${key}`).update(meal);
+  }
 }
