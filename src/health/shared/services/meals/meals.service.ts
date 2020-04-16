@@ -9,7 +9,7 @@ import { Observable, of, empty } from "rxjs";
 import { tap, map } from "rxjs/operators";
 
 export interface Meal {
-  name: String;
+  name: string;
   ingredients: string[];
   timestamp: number;
   key: string;
@@ -18,15 +18,6 @@ export interface Meal {
 
 @Injectable()
 export class MealsService {
-  // meals$: Observable<Meal[]> = this.db
-  //   .list<Meal>(`meals/${this.uid}`)
-  //   .valueChanges()
-  //   .pipe(
-  //     tap((next) => {
-  //       console.log(next);
-  //       this.store.set("meals", next);
-  //     })
-  //   );
   meals$: Observable<Meal[]> = this.db
     .list<Meal>(`meals/${this.uid}`)
     .snapshotChanges()
