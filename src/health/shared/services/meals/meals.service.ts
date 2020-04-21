@@ -39,6 +39,7 @@ export class MealsService {
     private authService: AuthService,
     private db: AngularFireDatabase
   ) {}
+
   get uid() {
     return this.authService.user.uid;
   }
